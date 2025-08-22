@@ -5,22 +5,13 @@ import { Link } from "react-router-dom"
 
 import "../../components_css/smartlights/SmartStreetLights.css"
 import lights1 from "../../images/streetlights/lights1.png"
-import lights2 from "../../images/streetlights/lights2.png"
-import lights3 from "../../images/streetlights/lights3.png"
-import lights4 from "../../images/streetlights/lights4.png"
 import lights5 from "../../images/streetlights/lights5.png"
-import lights6 from "../../images/streetlights/lights6.png"
 import lights7 from "../../images/streetlights/lights7.png"
 
 import lights8 from "../../images/streetlights/streetlights10.jpeg"
-import lights9 from "../../images/streetlights/streetlights11.jpeg"
-import lights10 from "../../images/streetlights/streetlights12.jpeg"
-import lights11 from "../../images/streetlights/lights15.png"
-import lights12 from "../../images/streetlights/lights16.png"
-import lights13 from "../../images/streetlights/lights17.png"
-import lights14 from "../../images/streetlights/lights18.png"
-import lights15 from "../../images/streetlights/lights13.png"
-import lights16 from "../../images/streetlights/lights 14.png"
+import driver1 from "../../images/streetlights/driver1.png"
+import driver2 from "../../images/streetlights/driver2.png"
+import driver3 from "../../images/streetlights/driver3.png"
 const SmartStreetLights = () => {
   const [activeType, setActiveType] = useState(0)
   const [activeFeature, setActiveFeature] = useState(0)
@@ -85,7 +76,47 @@ const SmartStreetLights = () => {
     //   models: ["12W", "15W", "20W", "30W", "40W", "50W", "60W"],
     // },
   ]
-
+  const DriverSeries = [
+    {
+      name: "LED Driver 20W Series",
+      description: "Compact and efficient LED driver solution with reliable performance for smaller applications",
+      specs: {
+        inputVoltage: "120V-270V AC, 50Hz",
+        surgeProtection: "4.0kV",
+        ipRating: "IP20",
+        powerRange: "20W"
+      },
+      features: ["Compact Design", "Reliable Performance", "Cost Effective", "Easy Installation"],
+      image: driver1, // Replace with actual image path
+      models: ["20W"],
+    },
+    {
+      name: "LED Driver 45W Series",
+      description: "Premium LED driver with advanced protection and superior efficiency for medium power applications",
+      specs: {
+        inputVoltage: "120V-300V AC, 50Hz",
+        surgeProtection: "4.0kV",
+        ipRating: "IP65",
+        powerRange: "45W"
+      },
+      features: ["Weather Resistant", "Advanced Protection", "High Efficiency", "Smart Compatible"],
+      image: driver2, // Replace with actual image path
+      models: ["45W"],
+    },
+    {
+      name: "LED Driver 70W Series",
+      description: "High-performance LED driver with cutting-edge protection technology for demanding applications",
+      specs: {
+        inputVoltage: "120V-300V AC, 50Hz",
+        surgeProtection: "4.0kV",
+        ipRating: "IP65",
+        powerRange: "70W"
+      },
+      features: ["Superior Protection", "High Performance", "Weather Sealed", "Long Lifespan"],
+      image: driver3, // Replace with actual image path
+      models: ["70W"],
+    },
+  ];
   const features = [
     {
       icon: "💡",
@@ -170,7 +201,7 @@ const SmartStreetLights = () => {
 
   return (
     <div className="streetlights-page">
-     
+
 
       {/* Hero Section */}
       <section className="streetlights-hero">
@@ -222,7 +253,7 @@ const SmartStreetLights = () => {
                   Download  Catalogue
                 </button>
               </a>
-              
+
               <Link to="/contactus" className="streetlights-btn-secondary">
                 Contact Us
               </Link>
@@ -297,7 +328,7 @@ const SmartStreetLights = () => {
       <section className="streetlights-series-section">
         <div className="streetlights-container">
           <div className="streetlights-section-header streetlight-animate-on-scroll">
-            <h2 className="streetlights-section-title">Our Product Series</h2>
+            <h2 className="streetlights-section-title">Our streetlights Series</h2>
             <p className="streetlights-section-subtitle">
               Comprehensive range of LED street lights for every application
             </p>
@@ -359,7 +390,79 @@ const SmartStreetLights = () => {
           </div>
         </div>
       </section>
+      <section className="streetlights-series-section">
+        <div className="streetlights-container">
+          <div className="streetlights-section-header streetlight-animate-on-scroll">
+            <h2 className="streetlights-section-title">Our LED Drivers Series</h2>
+            <p className="streetlights-section-subtitle">
+              Professional LED drivers with advanced surge protection and weather resistance
+            </p>
+          </div>
 
+          <div className="streetlights-series-nav">
+            {DriverSeries.map((series, index) => (
+              <button
+                key={index}
+                className={`streetlights-series-btn ${activeType === index ? "active" : ""} streetlight-animate-on-scroll`}
+                onClick={() => setActiveType(index)}
+              >
+                {series.specs.powerRange} {/* Show power rating */}
+              </button>
+            ))}
+          </div>
+
+          <div className="streetlights-series-display streetlight-animate-on-scroll" >
+            <div className="streetlights-series-content">
+              <div className="streetlights-series-info">
+                <h3>{DriverSeries[activeType].name}</h3>
+                <p>{DriverSeries[activeType].description}</p>
+
+                <div className="streetlights-series-specs">
+                  <div className="streetlights-spec-item">
+                    <span className="streetlights-spec-label">Input Voltage:</span>
+                    <span className="streetlights-spec-value">{DriverSeries[activeType].specs.inputVoltage}</span>
+                  </div>
+                  <div className="streetlights-spec-item">
+                    <span className="streetlights-spec-label">Surge Protection:</span>
+                    <span className="streetlights-spec-value">{DriverSeries[activeType].specs.surgeProtection}</span>
+                  </div>
+                  <div className="streetlights-spec-item">
+                    <span className="streetlights-spec-label">IP Rating:</span>
+                    <span className="streetlights-spec-value">{DriverSeries[activeType].specs.ipRating}</span>
+                  </div>
+                  <div className="streetlights-spec-item">
+                    <span className="streetlights-spec-label">Power Output:</span>
+                    <span className="streetlights-spec-value">{DriverSeries[activeType].specs.powerRange}</span>
+                  </div>
+                </div>
+
+                <div className="streetlights-series-features">
+                  {DriverSeries[activeType].features.map((feature, index) => (
+                    <div key={index} className="streetlights-feature-tag">
+                      <span className="streetlights-feature-check">✓</span>
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="streetlights-models-grid">
+                  <h4>Available Models:</h4>
+                  <div className="streetlights-models">
+                    {DriverSeries[activeType].models.map((model, index) => (
+                      <span key={index} className="streetlights-model-tag">
+                        {model}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="streetlights-series-image">
+                <img src={DriverSeries[activeType].image || "/placeholder.svg"} alt={DriverSeries[activeType].name} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Features Section */}
       <section className="streetlights-features-section">
         <div className="streetlights-container">
@@ -507,7 +610,7 @@ const SmartStreetLights = () => {
         </div>
       </section>
 
-      
+
     </div>
   )
 }
