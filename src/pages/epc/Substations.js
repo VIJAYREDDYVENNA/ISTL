@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import construction from "../../images/substations/construction1.jpg"
 import design1 from "../../images/substations/design1.jpg"
 import procurement from "../../images/substations/procurement.png"
-import testing from "../../images/substations/testing.jpg"
+import testing from "../../images/substations/Testing3.jpeg"
 import automation from "../../images/substations/automation.jpg"
 import itagi1 from "../../images/substations/itagi1.jpg"
 import itagi2 from "../../images/substations/itagi2.jpg"
@@ -25,6 +25,9 @@ import Kulenur3 from "../../images/substations/kulenur3.jpg"
 import hausbhavi1 from "../../images/substations/hausbhavi1.jpeg"
 import hausbhavi2 from "../../images/substations/hausbhavi2.jpeg"
 import hausbhavi3 from "../../images/substations/hausbhavi3.jpg"
+import hausbhavi4 from "../../images/substations/hausbhavi8.jpeg"
+import hausbhavi5 from "../../images/substations/hausbhavi5.jpg"
+import hausbhavi6 from "../../images/substations/hausbhavi6.jpg"
 import "../../components_css/epc/Substations.css"
 
 const Substations = () => {
@@ -154,12 +157,12 @@ const Substations = () => {
         },
         {
           name: "HAUNSBHAVI",
-          status: "Ready to Charge",
+          status: "Charged",
           details: ["2x10MVA,110/11kV Sub Station", "15.009km Transmission Line from Tiluvalli Sub Station"],
           images: [
-            hausbhavi1,
-            hausbhavi2,
-            hausbhavi3,
+            hausbhavi4,
+            hausbhavi5,
+            hausbhavi6,
           ],
         },
       ],
@@ -187,7 +190,7 @@ const Substations = () => {
         "Rain water Harvesting Tank",
         "Transformer Fire Wall",
       ],
-      image: construction,
+      image: hausbhavi3,
     },
     procurement: {
       title: "Procurement & Supply",
@@ -292,7 +295,7 @@ const Substations = () => {
                   <span className="ss-stat-label">KPTCL Projects</span>
                 </div>
                 <div className="ss-stat">
-                  <span className="ss-stat-number">3</span>
+                  <span className="ss-stat-number">4</span>
                   <span className="ss-stat-label">Active Divisions</span>
                 </div>
                 <div className="ss-stat">

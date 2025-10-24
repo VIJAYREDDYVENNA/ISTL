@@ -17,6 +17,9 @@ import agdsm26 from "../../images/Agdsm/agdsm26.jpg"
 import agdsm28 from "../../images/Agdsm/agdsm28.JPG"
 import agdsm29 from "../../images/Agdsm/agdsm29.JPG"
 import agdsm32 from "../../images/Agdsm/agdsm32.jpg"
+import paper_01 from "../../images/Agdsm/paper_01.jpg"
+import paper_02 from "../../images/Agdsm/paper_02.png"
+import paper_03 from "../../images/Agdsm/paper_03.png"
 
 
 const programmeGalleryImages = [
@@ -36,6 +39,9 @@ const programmeGalleryImages = [
   { id: 14, image: agdsm15 },
   { id: 15, image: agdsm16 },
   { id: 16, image: agdsm25 },
+  { id: 17, image: paper_01 },
+  { id: 18, image: paper_02 },
+  { id: 19, image: paper_03 },
 ];
 
 const ProgrammeGallery = () => {
